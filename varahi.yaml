@@ -23,7 +23,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: varahi-frontend-service-dev
-  namespace: engage  # Specify the namespace here
+  namespace: varahi  # Specify the namespace here
 spec:
   selector:
     app: frontend
