@@ -17,3 +17,8 @@ spec:
             name: varahi-frontend-service-dev
             port:
               number: 80
+    tls:
+  - hosts:
+    - varahi.lionsms.com
+    secretName: varahi-lionsms-com-tls
+
