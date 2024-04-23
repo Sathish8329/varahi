@@ -1,0 +1,26 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: varahi-lion
+  namespace: varahi
+spec:
+  secretName: varahi-kovaion-com-tls
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  subject:
+    organizations:
+      - lionsms-com
+  isCA: false
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    size: 2048
+  usages:
+    - server auth
+    - client auth
+  dnsNames:
+    - varahi.lionsms.com
+issuerRef:
+  name: letsencrypt-prod
+  kind: ClusterIssuer
+  group: cert-manager.io
