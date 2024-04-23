@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment-dev
+  name: varahi-frontend-deployment-dev
   namespace: varahi # Specify the namespace here
 spec:
   replicas: 1
