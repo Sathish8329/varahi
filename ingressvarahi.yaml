@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: varahi-ingress-dev
+  namespace: varahi
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: "varahi.lionsms.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: varahi-frontend-service-dev
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - varahi.lionsms.com
+    secretName: varahi-kovaion-com-tls
