@@ -20,4 +20,4 @@ spec:
   tls:
   - hosts:
     - varahi.lionsms.com
-    secretName: varahi-kovaion-com-tls
+    secretName: varahi-lionsms-com-tls
